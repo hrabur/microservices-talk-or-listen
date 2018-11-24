@@ -25,11 +25,13 @@
     <!-- Some images that are fixed to background in the css -->
     <img id="shep-left-image" class="bg" src="images/shep-left.png" />
     <img id="logo-image" class="bg" src="images/logoProxiadGPWpetit2.png" />
-    <img id="monolith-image" class="bg" src="images/monolith.jpeg" />
+    <img id="monolith-image" class="bg" src="images/hulk.png" />
+    <img id="spiderman-image" class="bg" src="images/spiderman.png" />
+    <img id="microservices-image" class="bg" src="images/microservice.png" />
     <img
-      id="crisps-image"
+      id="distributed-image"
       class="bg"
-      src="images/6636957665_5e7c4a79de_o.png"
+      src="images/distributed-computing.png"
     />
 
     <div id="impress" data-transition-duration="1000">
@@ -59,112 +61,151 @@
         </ul>
       </div>
 
-      <div id="monolith-jokes" class="step" data-x="2000" data-y="2000">
+      <div id="monolith-fake-cite" class="step" data-x="2000" data-y="2000">
         <h1>What people say about it</h1>
         <blockquote>
-          <p>
-            I love it, there is only one application to deploy and monitor in
-            production. I have enough time for coffee and cigarets
-          </p>
+          I love it, there is only one application to deploy and monitor in
+          production. I have enough time for coffee and cigarets
           <footer>Brad Pitt, IT Operational</footer>
         </blockquote>
 
         <blockquote>
-          <p>
-            I can create new client, initialise current account and credit card,
-            calculate the risk and score, transfer referal bonus and run 3
-            batches in single ACID transaction. Amazing!!!
-          </p>
+          I can create new client, initialise current account and credit card,
+          calculate the risk and score, transfer referal bonus and run 3 batches
+          in single ACID transaction. Amazing!!!
           <footer>Superman, Senior Developer</footer>
         </blockquote>
 
         <blockquote>
-          <p>
-            The credit team ask me to add new creadit score. I found there is
-            already table SCORE. I'll just add 3 new columns to the other 56 and
-            its done. We already have tables for everithing you may need.
-          </p>
+          The credit team ask me to add new credit score. I found there is
+          already table SCORE. I'll just add 3 new columns to the other 56 and
+          its done. Fantastic, our 5 years old app, already have tables for
+          everithing.
           <footer>Vesko Marinov, Business Analyst</footer>
         </blockquote>
       </div>
 
-      <div id="shame-on-me" class="step" data-rel-x="0" data-rel-y="1000">
+      <div id="monolith-truth" class="step" data-rel-x="0" data-rel-y="1000">
         <h1>Actually its no <span class="rotating">so</span> bad</h1>
         <p>
-          Well done <span class="positioning">monolith</span> has many
-          advanteges over the distributed by nature microservices
+          Well done <b>Monolith</b> has many advanteges over the distributed by
+          nature <b>Microservices</b>
         </p>
         <ul>
-          <li>Simple in-process comunication, i.e. method/function calls</li>
-          <li>ACID transactions</li>
+          <li>
+            <u>Simple, fine-grained, in-process comunication</u>, i.e.
+            method/function calls
+          </li>
+          <li>End-to-end ACID transactions</li>
           <li>Fast access to all data owned by the application</li>
           <li>Easy error handling at framework or language level</li>
           <li>Less complexity to deploy and monitor</li>
         </ul>
+        <blockquote>
+          With great power comes great responsibility
+          <footer>Spiderman</footer>
+        </blockquote>
       </div>
 
       <div id="microservices" class="step" data-rel-x="0" data-rel-y="1000">
-        <h1>Ice cream: Con's</h1>
-
+        <h1>What about Microservices</h1>
+        <p>Normal application focused on single business context or process</p>
         <ul>
-          <li>Not so great in the Winter</li>
-          <li>If you're allergic to lactose/milk</li>
-          <li>Diet alternatives are not real ice cream</li>
+          <li>Small, independently deployable services</li>
+          <li>Aligned to organizational and architectural boundaries</li>
+          <li>
+            <u>Distributted, corser-grained, inter-process communication</u>
+          </li>
+          <li>Microservice owns its own data and its own domain logic</li>
+          <li>Complex deployment, traceability and monitoring</li>
         </ul>
+        <blockquote>
+          It’s extremely important to achieve loose coupling between services,
+          otherwise you will easily end up with a distributed monolith.
+          <footer>Some wise man</footer>
+        </blockquote>
       </div>
 
-      <!-- Crisps slides (3) -->
       <div
-        id="crisps"
+        id="fallacies-of-distributed-computing"
         class="step"
         data-x="3500"
         data-y="2000"
-        data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
-        data-goto-next-list="icecream-con crisps-pro icecream applepie"
       >
-        <h1>Crisps</h1>
-
+        <h2>Fallacies of distributed computing</h2>
+        <p>
+          The fallacies of distributed computing are a set of assertions made by
+          L Peter Deutsch and others at Sun Microsystems
+        </p>
         <ul>
-          <li>Potatoes fried in oil and salted</li>
-          <li>Various flavors</li>
-          <li>Dips</li>
-          <li>Can be used as ingredient in subs (Cliff Huxtable style)</li>
+          <li>The network is reliable</li>
+          <li>Latency is zero</li>
+          <li>Bandwidth is infinite</li>
+          <li>The network is secure</li>
+          <li>Topology doesn't change.</li>
+          <li>There is one administrator.</li>
+          <li>...</li>
         </ul>
       </div>
 
       <div
-        id="crisps-pro"
+        id="microservices-communication"
         class="step"
         data-rel-x="0"
         data-rel-y="1000"
-        data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
-        data-goto-next-list="crisps crisps-con icecream-pro applepie-pro"
       >
-        <h1>Crisps: Pro's</h1>
-
-        <ul>
-          <li>Simple yet tasty concept</li>
-          <li>Great for snack</li>
-          <li>Salty / spicy (not sweet)</li>
-          <li>Finger food</li>
-          <li>Diet alternatives are often ok</li>
-        </ul>
+        <h1>Microservices communication</h1>
+        <div class="two-cols-grid">
+          <div id="architecture">
+            <h2>Architecture</h2>
+            <ul>
+              <li>Orchestration</li>
+              <li>Choreography</li>
+            </ul>
+          </div>
+          <div id="approaches">
+            <h2>Implementation</h2>
+            <ul>
+              <li>REST</li>
+              <li>Messaging</li>
+              <li>Domain Events</li>
+              <li>Feeds</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <div
-        id="crisps-con"
+        id="orchestration-vs-choreography"
         class="step"
         data-rel-x="0"
         data-rel-y="1000"
-        data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
-        data-goto-next-list="crisps-pro applepie icecream-con applepie-con"
       >
-        <h1>Crisps: Con's</h1>
-
-        <ul>
-          <li>Commonly not used as dessert</li>
-          <li>Not sweet</li>
-        </ul>
+        <h1>Orchestration vs Choreography</h1>
+        <div class="two-cols-grid">
+          <div id="orchestration">
+            <h2>Orchestration</h2>
+            <img src="images/conductor.jfif" style="width: 90%" />
+            <ul>
+              <li>Local, centralized perspective</li>
+              <li>
+                Each player in the orchestra strictly follows instructions from
+                the conducotr
+              </li>
+            </ul>
+          </div>
+          <div id="choreography">
+            <h2>Choreography</h2>
+            <img src="images/choreography.jfif" style="width: 90%" />
+            <ul>
+              <li>Global, distributed perspective</li>
+              <li>
+                Dancers dance following a global scenario and music, wihout
+                single point of control
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <!-- Apple pie slides (3) -->

@@ -101,11 +101,9 @@ h3,
 h4 {
   margin-bottom: 0.5em;
   margin-top: 0.5em;
-  text-align: center;
 }
 
 p {
-  text-align: center;
   margin: 0.7em;
 }
 
@@ -148,9 +146,18 @@ blockquote {
   font-weight: 400;
 }
 
+blockquote p {
+  text-align: left;
+}
+
 blockquote footer {
   font-size: 20px;
-  text-align: center;
+  text-align: left;
+  margin-top: 10px;
+}
+
+blockquote footer:before {
+  content: "-- ";
 }
 
 em {
@@ -199,9 +206,6 @@ img {
   transform: translateY(-10px);
 }
 
-/*
-  ... 'rotating' to rotate a quarter of a second later ...
-*/
 .rotating {
   -webkit-transform: rotate(-10deg);
   -moz-transform: rotate(-10deg);
@@ -216,9 +220,6 @@ img {
   transition-delay: 0.25s;
 }
 
-/*
-  ... and 'scaling' to scale down after another quarter of a second.
-*/
 .scaling {
   -webkit-transform: scale(0.7);
   -moz-transform: scale(0.7);
@@ -242,6 +243,13 @@ img.bg {
   height: auto;
   width: auto;
   transition: opacity 2s;
+}
+
+#intro h1,
+#intro h2,
+#intro h3,
+#intro h4 {
+  text-align: center;
 }
 
 #shep-left-image {
@@ -273,9 +281,9 @@ body.impress-on-intro #logo-image {
 }
 
 #monolith-image {
-  right: 0px;
-  top: 10%;
-  height: 80%;
+  right: 0;
+  bottom: 0;
+  height: 50%;
 }
 
 body.impress-on-monolith #monolith-image {
@@ -283,27 +291,41 @@ body.impress-on-monolith #monolith-image {
   transition: opacity 2s;
 }
 
-body.impress-on-icecream #icecream-image,
-body.impress-on-icecream-pro #icecream-image,
-body.impress-on-icecream-con #icecream-image,
-body.impress-on-conclusion #icecream-image,
-body.impress-on-overview #icecream-image {
+#spiderman-image {
+  bottom: 0;
+  right: 0;
+  height: 40%;
+}
+
+body.impress-on-monolith-truth #spiderman-image {
   opacity: 0.7;
   transition: opacity 2s;
 }
 
-#crisps-image {
+#microservices-image {
   right: 0px;
   bottom: 0px;
 }
 
-body.impress-on-crisps #crisps-image,
-body.impress-on-crisps-pro #crisps-image,
-body.impress-on-crisps-con #crisps-image,
-body.impress-on-conclusion #crisps-image,
-body.impress-on-overview #crisps-image {
+body.impress-on-microservices #microservices-image {
   opacity: 0.7;
   transition: opacity 2s;
+}
+
+#distributed-image {
+  right: 0px;
+  bottom: 0px;
+}
+
+body.impress-on-fallacies-of-distributed-computing #distributed-image {
+  opacity: 0.7;
+  transition: opacity 2s;
+}
+
+.two-cols-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 20px;
 }
 
 /*************** Slide specific things ****************************/
